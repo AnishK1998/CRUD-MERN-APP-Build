@@ -106,7 +106,7 @@ const Home = () => {
 
   useEffect(()=>{
     console.log("printing from useEffect ")
-    axios.get("/getalluser").then((res) => {
+    axios.get("https://crud-mern-app-backend.onrender.com/getalluser").then((res) => {
       const modifiedRows = res.data.map((item : any) => {
         return {...item, id: item._id}
       })
