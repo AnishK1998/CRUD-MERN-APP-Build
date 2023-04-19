@@ -1,0 +1,24 @@
+  
+  @media (max-width: 768px) {
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      font-size: 0.8rem;
+    }
+    .MuiDataGrid-columnHeader,
+    .MuiDataGrid-cell {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .MuiDataGrid-colCellTitle,
+    .MuiDataGrid-cell {
+      width: auto !important;
+    }
+  }
+  
+  
+  
+  
+  
+  
