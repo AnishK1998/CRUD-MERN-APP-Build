@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   const handleDelete = (item: string | number) => {
-    axios.delete(`/deleteUser/${item}`).then((res) => {
+    axios.delete(`https://crud-mern-app-backend.onrender.com/deleteUser/${item}`).then((res) => {
       toast.success("User is deleted sucessfully")
       setDeleteToggler(!deleteToggler)
     })

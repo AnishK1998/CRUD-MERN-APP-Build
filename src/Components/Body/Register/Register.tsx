@@ -40,7 +40,7 @@ const Register = (props: registerProps) => {
   console.log("formData ", formData);
 
   const registerUser = ()=>{
-    axios.post("/register", formData).then((res) => {
+    axios.post("https://crud-mern-app-backend.onrender.com/register", formData).then((res) => {
             toast.success("user is added sucessfully");
             setFormData({id: "",name: "", email: "", age: "",mobile: "",work: "",address: "",description: ""});
             setErrors({});
@@ -57,7 +57,7 @@ const Register = (props: registerProps) => {
   }
 
   const updateUserData = (formData: formdata)=>{
-    axios.put(`/updateUserDetails/${formData._id}`,formData).then((res) => {
+    axios.put(`https://crud-mern-app-backend.onrender.com/updateUserDetails/${formData._id}`,formData).then((res) => {
       console.log("res for updatedUserDetails ",res.data)
       toast.success("user data is updated")
       props.setToggleRegister(!props.toggleRegister);

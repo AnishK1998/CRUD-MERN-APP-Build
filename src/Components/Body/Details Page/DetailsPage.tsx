@@ -16,7 +16,7 @@ const DetailsPage = () => {
     const [editDataToggler, setEditDataToggler] = useState<boolean>(false);
     const history = useNavigate()
     useEffect(() =>{
-      axios.get(`/getIndividualUser/${id}`).then((res) => {
+      axios.get(`https://crud-mern-app-backend.onrender.com/getIndividualUser/${id}`).then((res) => {
         const modifieduserDetails = res.data;
         modifieduserDetails.id = res.data._id;
         setUserDetails(modifieduserDetails)
@@ -29,7 +29,7 @@ const DetailsPage = () => {
       toast.success("user details is updated")
     }
     const handleDelete = (item: string | undefined) => {
-      axios.delete(`/deleteUser/${item}`).then((res) => {
+      axios.delete(`https://crud-mern-app-backend.onrender.com/deleteUser/${item}`).then((res) => {
         toast.success("User is deleted sucessfully")
         history("/")
       })
